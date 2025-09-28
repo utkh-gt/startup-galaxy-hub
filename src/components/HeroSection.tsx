@@ -106,13 +106,7 @@ const HeroSection = () => {
         </div>
 
         {/* Secondary CTA */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/explore">
-              Explore Platform
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </Button>
+        <div className="flex items-center justify-center">
           <Button variant="neon" size="lg" asChild>
             <Link to="/demo">Watch Demo</Link>
           </Button>
