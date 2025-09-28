@@ -2,95 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* VentureVerse Futuristic Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Dark Theme */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass morphism surfaces */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 15% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon Green Primary */
+    --primary: 150 100% 50%;
+    --primary-foreground: 240 10% 4%;
+    --primary-glow: 150 100% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Hot Pink Secondary */
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 320 100% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Deep Violet Accent */
+    --accent: 258 90% 66%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 258 90% 76%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted tones */
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 240 10% 15%;
+    --input: 240 10% 12%;
+    --ring: 150 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Futuristic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 100% 50%) 0%, hsl(258 90% 66%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(320 100% 50%) 0%, hsl(150 100% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(258 90% 20%) 50%, hsl(150 100% 15%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 8% / 0.8) 0%, hsl(258 90% 20% / 0.1) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(150 100% 50% / 0.3) 0%, transparent 70%);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Glass morphism effects */
+    --glass-bg: hsl(240 10% 8% / 0.3);
+    --glass-border: hsl(0 0% 100% / 0.1);
+    --glass-shadow: 0 8px 32px hsl(240 10% 4% / 0.3);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Neon glow shadows */
+    --glow-primary: 0 0 20px hsl(150 100% 50% / 0.5);
+    --glow-secondary: 0 0 20px hsl(320 100% 50% / 0.5);
+    --glow-accent: 0 0 20px hsl(258 90% 66% / 0.5);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animation durations */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
   }
 }
 
@@ -100,6 +77,90 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Glass morphism utilities */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Neon glow effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  /* Hero text with gradient */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Interactive hover effects */
+  .hover-glow {
+    transition: all var(--transition-normal) ease;
+  }
+
+  .hover-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-primary);
+  }
+
+  .hover-lift {
+    transition: all var(--transition-normal) ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  /* Animated background patterns */
+  .animated-bg {
+    background: var(--gradient-hero);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Pulse animation for CTAs */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    from {
+      box-shadow: 0 0 20px hsl(150 100% 50% / 0.3);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(150 100% 50% / 0.6);
+    }
   }
 }
