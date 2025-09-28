@@ -114,22 +114,28 @@
     transition: none;
   }
 
-  /* Interactive hover effects */
+  .text-gradient:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background: var(--gradient-primary);
+  }
+
+  /* Interactive hover effects - Disabled */
   .hover-glow {
-    transition: all var(--transition-normal) ease;
+    transition: none;
   }
 
   .hover-glow:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glow-primary);
+    transform: none;
+    box-shadow: none;
   }
 
   .hover-lift {
-    transition: all var(--transition-normal) ease;
+    transition: none;
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: none;
   }
 
   /* Animated background patterns */
