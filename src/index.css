@@ -111,13 +111,17 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: none;
+    transition: none !important;
   }
 
   .text-gradient:hover {
     transform: none !important;
     box-shadow: none !important;
-    background: var(--gradient-primary);
+    scale: none !important;
+    background: var(--gradient-primary) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
   }
 
   /* Interactive hover effects - Disabled */
